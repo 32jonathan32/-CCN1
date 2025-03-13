@@ -48,6 +48,27 @@
             # Exibir uma mensagem personalizada
             print(f"Olá, {nome}! Você tem {idade} anos.")
 
+        def read_word(register):
+    high = bus.read_byte_data(MPU6050_ADDR, register)
+    low = bus.read_byte_data(MPU6050_ADDR, register + 1)
+    value = (high << 8) + low
+    if value >= 0x8000:
+        value -= 0x10000
+    return value
+
+# Função para ler os valores de aceleração nas três dimensões
+def read_acceleration():
+    ax = read_word(ACCEL_XOUT_H)
+    ay = read_word(ACCEL_YOUT_H)
+    az = read_word(ACCEL_ZOUT_H)
+    return ax, ay, az
+
+# Loop para ler e exibir os dados de aceleração
+while True:
+    ax, ay, az = read_acceleration()
+    print(f"Aceleração X: {ax} | Aceleração Y: {ay} | Aceleração Z: {az}")
+    time.sleep(1)
+
         </code>
     </pre>
 
