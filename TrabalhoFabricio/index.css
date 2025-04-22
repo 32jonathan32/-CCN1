@@ -1,0 +1,64 @@
+
+body{
+    background-image:url(imagensVideos/fundo.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+
+
+main {
+
+
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 5px 5px 5px black;
+    background-color: rgb(184, 178, 178);
+    text-align: center;
+    width: 20cm;
+    padding: 2cm;
+    margin:auto;
+    
+ }
+ p{
+    text-align: left;
+    border: radius 1px;
+ }
+ h1{
+    text-align: center;
+    color: #0664a4;  
+    text-shadow: 2px 2px 2px;
+ }
+ h2{
+
+    text-align: left;
+    color:#05b1bf;
+    text-shadow: 1px 1px 1px;
+
+ }
+ h3{
+   text-align: left;
+    color:#05b1bf;
+    text-shadow: 1px 1px 1px;
+
+ }
+ a{
+   color: black;
+   text-align: left;
+   border: radius 1px;
+ }
+ div {
+   font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 5px 5px 5px black;
+    background-color:#05b1bf;
+    text-align: center;
+    width: 20cm;
+    padding: 2cm;
+    margin:auto;
+    border-top-right-radius:25px ;
+    border-top-left-radius: 25px;
+
+
+
+ }
